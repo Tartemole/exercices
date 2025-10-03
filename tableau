@@ -1,0 +1,22 @@
+import java.util.Arrays;
+
+public class tableaux {
+
+	public static void main (String[] args) {
+	
+	int[] []tableau = new int [5][5]; 
+	int compteur = 1;
+	
+	
+    for (int i = 0; i < tableau.length; i++) {
+        for (int j = 0; j < tableau[i].length; j++) {
+        	tableau[i][j] = compteur++;
+			} 
+	}
+    System.out.println(Arrays.toString(tableau[0]));
+    System.out.println(Arrays.toString(tableau[1]));
+    System.out.println(Arrays.toString(tableau[2]));
+    System.out.println(Arrays.toString(tableau[3]));
+    System.out.println(Arrays.toString(tableau[4]));
+}
+}
