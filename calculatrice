@@ -1,0 +1,58 @@
+import java.util.Scanner; 
+
+public class calculatrice2 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+	
+		System.out.println("merci de saisir la note 1");
+		double a = scan.nextDouble();
+		
+		System.out.println("merci de saisir la note 2");
+		double b = scan.nextDouble();
+				
+		System.out.println("1 pour addition  2 pour soustraction  3 pour multiplication  4 pour division 5 pour quitter"); 
+		int choix = scan.nextInt();
+				
+				calculerChoix(a, b, choix);
+			
+				System.out.println("ce n'est pas un nombre");	
+			
+		
+		
+		scan.close();
+	}
+
+	private static void calculerChoix(double a , double b , int choix) {
+		switch (choix) {
+			case 1 :
+				double resultat = (a+b); 
+				System.out.printf(a + " + " + b + " = " + "%.1f.%n", resultat);
+			break; 	
+			case 2 :
+				double resultat1 = (a - b);
+				System.out.printf(a + " - " + b + " = " + "%.1f%n", resultat1);
+			break;	
+			case 3 :
+				double resultat2 = a * b;
+				System.out.printf(a + " x " + b + " = " + "%.1f%n", resultat2);
+			break;	
+			case 4 :
+				if (b!=0) {
+					double resultat3 = a / b;
+					System.out.printf(a + " / " + b + " = " + "%.1f%n", resultat3);
+				} else {
+					System.out.println("division par 0 impossible");
+				}	
+			break;
+			case 5 :
+				System.out.println("Au revoir");
+			break;
+			default : 
+				System.out.println("Choix invalide");
+			}
+		}
+}
+
+	
+
