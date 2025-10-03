@@ -1,0 +1,29 @@
+
+public class tpParite {
+	
+	public static void main () {
+		
+	
+	
+	String saisie = IO.readln("merci de saisir en entier");
+	int nombre = Integer.parseInt(saisie); 
+
+	
+
+		if (nombre % 2 == 0) {
+			IO.println("Votre nombre est " + nombre + " les imapairs précédents sont donc : ");
+			int nombre2 = nombre - 1;
+			for (int i = nombre2; i >= 1 ; i+= -2) { 
+			
+					IO.println(i);
+				}
+			} else {
+				IO.println("Votre nombre est " + nombre + " les imapairs précédents sont donc : ");
+				int nombre2 = nombre -2;
+				for (int i = nombre2; i >= 1 ; i+= -2) { 
+				
+				IO.println(i); 
+			} 
+		}		
+	}
+}
